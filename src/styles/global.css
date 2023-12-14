@@ -1,4 +1,42 @@
+:root {
+    --bg0_h: #1d2021; 
+    --bg: #282828;
+    --fg: #ebdbb2;
+    --red: #cc241d;
+    --light_red: #fb4934;
+}
+
+* {
+    background-color: var(--bg0_h);
+    font-family: sans-serif;
+}
+
+h1 {
+    color: var(--fg);
+    text-align: center;
+}
+
+.errMsg {
+    color: var(--light_red);
+    text-align: center;
+}
+
+.errMsg a {
+    color: var(--light_red);
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.errMsg a:hover,
+.errMsg a:focus {
+    color: var(--fg);
+    background-color: var(--red);
+}
+
 .navigation {
     background-color: #282828;
     overflow:  hidden;
 }
+
+
