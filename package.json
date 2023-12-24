@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "githubpages",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,6 +11,12 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.2",
-    "astro": "^4.0.4"
-  }
+    "@astrojs/ts-plugin": "^1.3.1",
+    "astro": "^4.0.7"
+  },
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

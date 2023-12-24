@@ -78,7 +78,6 @@ body {
 
 .navigation > * {
    background: var(--bg2);
-   color: var(--fg0);
    height: 100%;
    padding: 5x;
 }
