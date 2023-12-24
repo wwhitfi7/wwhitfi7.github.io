@@ -66,7 +66,9 @@ body {
 }
 
 * {
-    background: var(--bg0h);
+    background-color: var(--bg0h);
+    color: var(--fg1);
+    transition: background-color 500ms ease-in, color 1000ms ease-in;
 }
 
 .navigation {
@@ -74,23 +76,25 @@ body {
    background: var(--bg2);
    height: 30px;
    width: 100%;
+   padding: 0;
+   margin: 0;
 }
 
 .navigation > * {
    background: var(--bg2);
-   height: 100%;
-   padding: 5x;
+   color: var(--fg0);
+   margin: 2px;
+   align-items: center;
+}
+
+.navigation label {
+    background: var(--bg2);
+    color: var(--blue_cont);
 }
 
 .push-left {
     margin-left: auto;
 }
-
-a {
-    color: currentColor;
-    text-decoration: none;
-}
-
 
 
 
