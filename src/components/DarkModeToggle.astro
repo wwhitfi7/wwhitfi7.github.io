@@ -1,7 +1,8 @@
 ---
 const { class: className, ...rest} = Astro.props
 ---
-<input id="dmode" type="checkbox"></input>
-<label for="dmode" class:list={className}>Theme Switch</label>
+<input id="dmode" type="checkbox">
+    <label for="dmode" class:list={className} tabindex="0">Theme</label>
+</input>
 <script src="../scripts/dmodeSwitch.ts">
 </script>

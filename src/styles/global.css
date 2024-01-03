@@ -1,7 +1,11 @@
-body {
-    margin: 0px;
-    padding: 0px;
-}
+/*
+ * Color scheme definitions:
+ * light - light scheme
+ * dark - dark scheme
+ *
+ * Based on GruvBox
+ *
+ */
 
 .light {
     --bg0h: #F9F5D7;
@@ -65,41 +69,86 @@ body {
     --orange_cont: #FE8019;
 }
 
+/* Universal/Body Styling*/
 * {
     background-color: var(--bg0h);
     color: var(--fg1);
-    transition: background-color 500ms ease-in, color 1000ms ease-in, content 1000ms ease-in;
+}
+
+html, body {
     box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.navigation {
-   display: flex;
-   background: var(--bg2);
-   height: 30px;
-   width: 100%;
-   padding: 0px;
-   margin: 0px;
-   align-items:center;
+.wrapper {
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-
-
-.navigation * {
-   background: var(--bg2);
-   color: var(--fg0);
-   display: block;
-   font-size: 18px;
-   border-left: 2px solid var(--fg0);
-   border-right: 2px none var(--fg0);
-   margin-right: 6px;
-   padding-left: 6px;
-   text-decoration: none;
+.page-footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    background-color: var(--bg2);
 }
 
+.page-footer * {
+    color: var(--fg0);
+    background-color: var(--bg2);
+    margin-right: 6px;
+    padding-left: 6px;
+    border-left: 2px solid var(--fg0);
+    border-right: 2px none var(--fg0);
+    font-size: 12pt;
+    font-family: Hack, monospace;
+    vertical-align: middle;
+}
 
-.navigation *:first-child {
-   border-left: none; 
-   margin-left: none;
+.page-footer *:first-child {
+    border-left: none; 
+    margin-left: none;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+/* Navigation Bar Styles
+ * Nav - Sets up the nav bar
+ * nav * - Basic button layout
+ * nav *:first-child - remove styling for leftmost button
+ * push-left - split the navbar
+ */
+nav {
+    display: flex;
+    background: var(--bg2);
+    height: 30px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    align-items:center;
+}
+
+nav * {
+    background: var(--bg2);
+    color: var(--fg0);
+    display: block;
+    border-left: 2px solid var(--fg0);
+    border-right: 2px none var(--fg0);
+    margin-right: 6px;
+    padding-left: 6px;
+    text-decoration: none;
+    font-family: Hack, monospace;
+    font-size: 18px;
+}
+
+nav *:first-child  {
+    border-left: none; 
+    margin-left: none;
 }
 
 .push-left {
@@ -107,19 +156,20 @@ body {
     border-left: none;
 }
 
+
 #dmode {
     display: none;
     vertical-align: top;
 }
 
+/* Dark Mode button styling*/
 #dmode + label[for="dmode"]::before {
     content: "\2600";
     font-size: 18px;
     margin-right: 5px;
-    vertical-align: baseline;
+    vertical-align: text-top;
 }
 
 #dmode:checked + label[for="dmode"]::before {
     content: "\263E";
 }
-
