@@ -2,11 +2,12 @@
 import DarkModeToggle from './DarkModeToggle.astro'
 ---
 <nav>
-    <ul class="main-nav">
-        <li><a href='/'>Home</a></li>
-        <li><a href='/projects/'>Projects</a></li>
-        <li><a href='/blog/'>Blog</a></li>
-        <li class="push"><a href='/about/'>About</a></li>
-        <li><a href='/contact/'>Contact</a></li>
+    <ul class="navigation">
+        <a href='/'>Home</a>
+        <a href='/projects/'>Projects</a>
+        <a href='/blog/'>Blog</a>
+        <DarkModeToggle class="push-left" />
+        <a href='/about/'>About</a>
+        <a href='/contact/'>Contact</a>
     </ul>
 </nav>
