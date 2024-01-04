@@ -113,15 +113,18 @@ html, body {
 .content img {
     margin: 0px auto 0px;
     display: block;
+    max-width: 25%;
+    max-height: 45%;
 }
 
 .content .row {
     display: flex;
 }
 
-.row .column {
+.content .row .column {
     flex: 50%; 
 }
+
 
 /* Sticky Footers */
 .page-footer {
@@ -148,6 +151,16 @@ html, body {
 .page-footer *:first-child {
     border-left: none; 
     margin-left: none;
+}
+
+.ANSIme {
+    whitespace: pre;
+    line-height: 0;
+    font-size: 8px;
+}
+
+.ANSIme span {
+    width: 4px;
 }
 
 /* Navigation Bar Styles
