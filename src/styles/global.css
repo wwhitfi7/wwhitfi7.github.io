@@ -106,7 +106,6 @@ html, body {
 }
 
 .content p {
-    padding: 0 5vw 0;
     text-align: justify;
 }
 
@@ -123,6 +122,19 @@ html, body {
 
 .content .row .column {
     flex: 50%; 
+    padding-left: 5vw;
+    padding-right: .5vw;
+}
+
+.content .row .column:last-child > * {
+    text-align: right;
+    padding-right: 5vw;
+    padding-left: .5vw;
+}
+
+.warning {
+    color: var(--yellow_cont);
+    text-align: center;
 }
 
 
@@ -154,13 +166,20 @@ html, body {
 }
 
 .ANSIme {
-    whitespace: pre;
-    line-height: 0;
-    font-size: 8px;
-}
+    display: inline-block;
+    white-space: pre;
+    letter-spacing: 0;
+    line-height: 1;
+    font-family: 'BitstreamVeraSansMono','CourierNew',Courier,monospace;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    }
 
 .ANSIme span {
-    width: 4px;
+    width: 8px;
+    background-color: ffffff;
 }
 
 /* Navigation Bar Styles
