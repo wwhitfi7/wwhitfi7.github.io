@@ -1,0 +1,22 @@
+#dmode {
+    display: none;
+    vertical-align: top;
+}
+
+/* Dark Mode button styling*/
+#dmode + label[for="dmode"]::before {
+    content: "\2600";
+    font-size: 18px;
+    margin-right: 5px;
+    vertical-align: text-top;
+}
+
+#dmode:checked + label[for="dmode"]::before {
+    content: "\263E";
+}
+
+@media (max-width: 768px) {
+    #dmode + label[for="dmode"]::before {
+        font-size: 14px;
+    }
+}

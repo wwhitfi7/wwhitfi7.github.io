@@ -1,0 +1,35 @@
+/* Sticky Footers */
+.page-footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    background-color: var(--bg2);
+    align-items: center;
+}
+
+.page-footer * {
+    color: var(--fg0);
+    background-color: var(--bg2);
+    margin-right: 6px;
+    padding-left: 6px;
+    border-left: 2px solid var(--fg0);
+    border-right: 2px none var(--fg0);
+    font-size: 12pt;
+    font-family: Hack, monospace;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.page-footer *:first-child {
+    border-left: none; 
+    margin-left: none;
+}
+
+@media (max-width: 768px) {
+    .page-footer *:first-child {
+        display: none;
+    }
+    .page-footer *:nth-child(2){
+        border-left: none;
+    }
+}

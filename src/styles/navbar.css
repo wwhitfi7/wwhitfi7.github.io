@@ -1,0 +1,54 @@
+/* Navigation Bar Styles
+ * Nav - Sets up the nav bar
+ * nav * - Basic button layout
+ * nav *:first-child - remove styling for leftmost button
+ * push-left - split the navbar
+ */
+nav {
+    display: flex;
+    background: var(--bg2);
+    height: 30px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    align-items:center;
+}
+
+nav * {
+    background: var(--bg2);
+    color: var(--fg0);
+    display: block;
+    border-left: 2px solid var(--fg0);
+    border-right: 2px none var(--fg0);
+    margin-right: 6px;
+    padding-left: 6px;
+    text-decoration: none;
+    font-family: Hack, monospace;
+    font-size: 18px;
+}
+
+nav *:first-child  {
+    border-left: none; 
+    margin-left: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--fg0);
+}
+
+.push-left {
+    margin-left: auto;
+    border-left: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav * {
+        overflow: clip;
+        border: none;
+        font-size: 14px;
+        text-align: baseline;
+    }
+}
