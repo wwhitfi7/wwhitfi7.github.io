@@ -1,0 +1,18 @@
+#hamburger {
+    font-family: Hack;
+    flex-direction: column;
+    display: none;
+}
+
+label[for="hamburger"] {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    label[for="hamburger"] {
+        display: block;
+        align-text: centered;
+        font-size: 24pt;
+        padding-left: 5vw;
+    }
+}

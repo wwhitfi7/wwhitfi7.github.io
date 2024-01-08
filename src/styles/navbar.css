@@ -1,4 +1,6 @@
-/* Navigation Bar Styles
+/* Navigation Bar S
+        align-text: center;
+yles
  * Nav - Sets up the nav bar
  * nav * - Basic button layout
  * nav *:first-child - remove styling for leftmost button
@@ -11,7 +13,7 @@ nav {
     width: 100%;
     padding: 0px;
     margin: 0px;
-    align-items:center;
+    align-items: center;
 }
 
 nav * {
@@ -32,23 +34,33 @@ nav *:first-child  {
     margin-left: none;
 }
 
-.hamburger {
-    display: none;
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--fg0);
-}
-
 .push-left {
     margin-left: auto;
     border-left: none;
 }
 
 @media screen and (max-width: 768px) {
-    nav * {
-        overflow: clip;
-        border: none;
-        font-size: 14px;
-        text-align: baseline;
+    nav {
+        display: none;
+        height: auto;
+        align-items: center;
     }
+
+    nav * {
+        border: none; 
+        margin: 0;
+        padding: 0;
+    }
+
+    .push-left {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #hamburger:checked ~ nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }
