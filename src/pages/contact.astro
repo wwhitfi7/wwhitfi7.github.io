@@ -1,16 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+import "../styles/contact.css"
 ---
 <BaseLayout pageTitle="Contact Me:">
     <h2 class="warning">For the fastest response - please reach out by phone or email!</h2>
-    <div class="row">
-        <div class="column">
-            <h3>Phone:</h3>
-            <p>(229)516-2409</p>
-        </div>
-        <div class="column">
-            <h3>E-Mail:</h3>
-            <p>wyatt.r.whitfield@gmail.com</p>
-        </div>
+    <div class="contactContainer">
+       <h3>Phone:</h3> 
+       <a href="tel:+12295162409">(229) 516-2409</a>
+       <h3>E-Mail:</h3> 
+       <a href="mailto:wyatt.r.whitfield@gmail.com">wyatt.r.whitfield@gmail.com</a>
+       <h3>GitHub</h3> 
+       <a href="https://www.github.com/wwhitfi7">wwhitfi7</a>
+       <h3>X (formerly Twitter):</h3> 
+       <a href="https://www.twitter.com/wwhitfi7">@wwhitfi7</a>
     </div>
 </BaseLayout>

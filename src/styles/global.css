@@ -81,8 +81,3 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
-.warning {
-    color: var(--yellow_cont);
-    text-align: center;
-}

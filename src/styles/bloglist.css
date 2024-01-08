@@ -1,14 +1,49 @@
-.bloglist {
-    border: 1px solid;
+.content {
+    justify-content: center;
 }
 
-.bloglist * {
-    padding: 10 px;
-    margin: 15px;
+.bloglist table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.bloglist th, .bloglist td {
     text-align: left;
+    padding: 5px 5vw 5px;
 }
 
-.bloglist td {
-    border-left: 1px dashed;
-    border-right: 1px dashed;
+.bloglist th:last-child, .bloglist td:last-child {
+    text-align: right;
 }
+
+@media screen and (max-width: 768px) {
+    .bloglist th:last-child, .bloglist td:last-child {
+        display: none;
+    }
+
+    .bloglist td:first-child, .bloglist th:first-child {
+        padding-right: .3%;
+        padding-left: 0%;
+        padding-up: 0%;
+        padding-down: 0%;
+    }
+
+    .bloglist td:nth-child(2), .bloglist th:nth-child(2) {
+        padding-right: 0%;
+        padding-left: 0%;
+        padding-up: 0%;
+        padding-down: 0%;
+        text-align: right;
+    }
+
+    .bloglist td {
+       font-size: 10pt; 
+    }
+
+    .bloglist table {
+        padding: 0;
+        margin: 0;
+    }
+}
+

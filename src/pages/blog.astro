@@ -7,20 +7,25 @@ const allBlogPosts = await getCollection('blogposts');
 
 ---
 <BaseLayout pageTitle="Blog Posts">
+    <hr style="margin-bottom: 20px">
     <table class="bloglist">
         <tr>
             <th>Post Title</th>
             <th>Date Published</th>
+            <th>Tags</th>
         </tr>
     {allBlogPosts.map(blogEntry => (
         <tr>
             <td>
-                <a href={`/blogposts/${blogEntry.slug}`}>{blogEntry.data.title}</a>
+                <a href={`/blog/${blogEntry.slug}`}>{blogEntry.data.title}</a>
             </td>
             <td>
                 <time datetime={blogEntry.data.publishDate.toISOString()}>
                     {blogEntry.data.publishDate.toDateString()}
                 </time>
+            </td>
+            <td>
+                {blogEntry.data.tags.toString().replaceAll(",", ", ")}
             </td>
         </tr>
     ))}

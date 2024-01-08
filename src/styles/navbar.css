@@ -22,7 +22,7 @@ nav * {
     display: block;
     border-left: 2px solid var(--fg0);
     border-right: 2px none var(--fg0);
-    margin-right: 6px;
+    padding-right: 6px;
     padding-left: 6px;
     text-decoration: none;
     font-family: Hack, monospace;
@@ -39,17 +39,24 @@ nav *:first-child  {
     border-left: none;
 }
 
+nav *:hover {
+    background-color: var(--bg0s);
+}
+
 @media screen and (max-width: 768px) {
     nav {
+        font-size: 22pt;
         display: none;
         height: auto;
+        width: auto;
         align-items: center;
     }
 
     nav * {
         border: none; 
         margin: 0;
-        padding: 0;
+        padding: 2% 0 2%;
+        
     }
 
     .push-left {
